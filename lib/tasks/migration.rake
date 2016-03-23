@@ -2,9 +2,7 @@ namespace :database do
   desc 'Run migration'
   task :migrate, [:version] do |t, args|
     require 'sequel'
-    require 'pry-rails'
     Sequel.extension :migration
-    binding.pry
     db = Sequel.connect(ENV.fetch('DATABASE_URL'))
     if args[:version]
       pust "Migrating to version #{args[:version]}"

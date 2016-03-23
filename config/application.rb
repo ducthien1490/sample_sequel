@@ -37,8 +37,6 @@ module SampleSequel
     config.sequel.max_connections = 16
     config.sequel.search_path = %w(mine public)
 
-    config.sequel.load_database_tasks = false
-
     # If you want to use a specific logger
     config.sequel.logger = Logger.new($stdout)
 
